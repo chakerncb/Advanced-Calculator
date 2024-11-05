@@ -93,13 +93,13 @@ clear.addEventListener('click', () => {
 });
 
 function toggleDropdown() {
-        var dropdown = document.getElementById('dropdown-menu');
-        if (dropdown.style.display === 'none') {
-            dropdown.style.display = 'block';
-        } else {
-            dropdown.style.display = 'none';
-        }
-        }
+  var dropdown = document.getElementById("dropdown-menu");
+  if (dropdown.style.display === "none") {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
 
 
 

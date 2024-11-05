@@ -32,7 +32,7 @@ tbody {
     background-color: #000000;
     padding: 6px;
     box-shadow: 0 0 10px 0 #000000;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .equal {
@@ -69,9 +69,13 @@ tbody {
     color: #000000;
 }
 
-.hambuger-btn {
+.hamburger-btn {
+   text-align: start;
+}
 
-    margin-right: 30px;
+.hamburger-btn svg {
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 #dropdown-menu {
