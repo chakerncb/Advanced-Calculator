@@ -8,6 +8,25 @@ let operatorValue = '';
 let firstValue = '';
 result.innerHTML = 0;
 
+
+let mode1 = document.getElementById('mode1');
+let mode2 = document.getElementById('mode2');
+let functions = document.getElementById('functions');
+
+mode1.addEventListener('click', () => {
+    functions.style.display = 'none';
+    });
+
+
+mode2.addEventListener('click', () => {
+    functions.style.display = 'block';
+     });
+
+
+
+    
+
+
 numbers.forEach((number) => {
     number.addEventListener('click', () => {
         if (number.innerHTML === 'π') {

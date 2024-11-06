@@ -21,13 +21,13 @@
         </div>
         <div id="dropdown-menu">
             <ul>
-            <li>Basic</li>
+            <li id="mode1">Basic</li>
             <hr>
-            <li>Scientific</li>
+            <li id="mode2">Scientific</li>
             </ul>
         </div>
-        <table>
-            <thead>
+        <div class="result-section">
+            <table>
                 <tr class="opr-result">
                     <td id="result-operation" colspan="4">
                         
@@ -39,41 +39,88 @@
                     </td>
                     <br>
                 </tr>
-            </thead>
-            <tbody>
+            </table>
+        </div>
+        <div class="operations-section">
+            <table id="functions">
+                    <tr>
+                        <td class="func-btn">(</td>
+                        <td class="func-btn">)</td>
+                        <td class="func-btn">mc</td>
+                        <td class="func-btn">m+</td>
+                        <td class="func-btn">m-</td>
+                        <td class="func-btn">mr</td>
+                    </tr>
+                    <tr>
+                        <td class="func-btn">2nd</td>
+                        <td class="func-btn">χ2 </td>
+                        <td class="func-btn">χ3</td>
+                        <td class="func-btn">x^y</td>
+                        <td class="func-btn">eˣ</td>
+                        <td class="func-btn">10^x</td>
+                    </tr>
+                    <tr>
+                        <td class="func-btn">1/x</td>
+                        <td class="func-btn">2√x</td>
+                        <td class="func-btn">3√x</td>
+                        <td class="func-btn">y√x</td>
+                        <td class="func-btn">ln</td>
+                        <td class="func-btn">Log10</td>
+                    </tr>
+                    <tr>
+                        <td class="func-btn">x!</td>
+                        <td class="func-btn">sin</td>
+                        <td class="func-btn">cos</td>
+                        <td class="func-btn">tan</td>
+                        <td class="func-btn">e</td>
+                        <td class="func-btn">EE</td>
+                    </tr>
+                    <tr>
+                        <td class="func-btn">Rand</td>
+                        <td class="func-btn">sinh</td>
+                        <td class="func-btn">cosh</td>
+                        <td class="func-btn">tanh</td>
+                        <td class="func-btn">π</td>
+                        <td class="func-btn">Deg</td>
+                    </tr>
+            </table>
+            <table>
+                <tbody>
 
-            <tr>
-                <td class="head" id="AC">AC</td>
-                <td class="head">+/-</td>
-                <td class="head">%</td>
-                <td class="operation">÷</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td class="operation">x</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td class="operation">-</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td class="operation">+</td>
-            </tr>
-            <tr>
-                <td id="pi" >π</td>
-                <td>0</td>
-                <td>.</td>
-                <td class="operation" id="=">=</td>
-            </tr>
-        </tbody>
-       </table>
+                <tr>
+                    <td class="head" id="AC">AC</td>
+                    <td class="head">+/-</td>
+                    <td class="head">%</td>
+                    <td class="operation">÷</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td class="operation">x</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td class="operation">-</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td class="operation">+</td>
+                </tr>
+                <tr>
+                    <td id="pi" >π</td>
+                    <td>0</td>
+                    <td>.</td>
+                    <td class="operation" id="=">=</td>
+                </tr>
+            </tbody>
+           </table>
+        </div>
+        
     </div>
 </center>
    

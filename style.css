@@ -11,20 +11,34 @@ th, td {
     padding: 20px;
     font: 1.5em sans-serif;
     border-radius: 50px;
+    width: 15%;
 }
 
-
-table {
-    width: 90%;
-    height: 90%;
+.result-section {
+    width: 365px;
+    height: 250px;
+    position: relative;
 }
 
-tbody {
-
+.result-table {
+    
 }
+
+.operations-section {
+    width: 365px;
+    height: 145px;
+    position: relative;
+}
+
+.operations-section table {
+    width: 93%;
+    height: 70%;
+    position: relative;
+}
+
 
 .calculator {
-    width: 365px;
+    width: fit-content;
     height: 573px;
     margin-top: 6%;
     border: 1px solid #000000;
@@ -32,7 +46,6 @@ tbody {
     background-color: #000000;
     padding: 6px;
     box-shadow: 0 0 10px 0 #000000;
-    padding-bottom: 40px;
 }
 
 .equal {
@@ -87,6 +100,7 @@ tbody {
     box-shadow: 0 0 10px 0 #000000;
     text-align: center;
     width: 100px;
+    z-index: 100;
 }
 
 #dropdown-menu ul {
@@ -103,4 +117,21 @@ tbody {
 
 #dropdown-menu li:hover {
     color: #F79000;
+}
+
+#functions {
+    display: none;
+    width: 365px;
+    height: 145px;
+    position: relative;    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000000;
+    text-align: center;
+}
+
+.func-btn {
+    background-color: #232324;
+    color: #ffffff;
+    font-size: 0.5rem;
+    font-weight: bold;
+    border: 1px solid #000000;
 }
