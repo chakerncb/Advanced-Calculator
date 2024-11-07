@@ -23,17 +23,16 @@ mode2.addEventListener('click', () => {
 
 numbers.forEach((number) => {
     number.addEventListener('click', () => {
-        if (result.innerHTML === '0') {
-            result.innerHTML = number.innerHTML;
-        } else {
+        if (number.innerHTML === '.') {
             result.innerHTML += number.innerHTML;
-        }
+        } else  
+          result.innerHTML += number.innerHTML;
     });
 });
 
 operators.forEach((op) => {
     op.addEventListener('click', () => {
-        if (['+', '-', '÷', 'x'].includes(op.innerHTML)) {
+        if (['+', '-', '÷', 'x', '^'].includes(op.innerHTML)) {
             operatorValue = op.innerHTML === '÷' ? '/' : op.innerHTML === 'x' ? '*' : op.innerHTML;
             firstValue = result.innerHTML;
             result.innerHTML = '';
@@ -57,9 +56,6 @@ functions.forEach((func) => {
                 break;
             case 'x2':
                 result.innerHTML = Math.pow(value, 2).toFixed(6);
-                break;
-            case 'x3':
-                result.innerHTML = Math.pow(value, 3).toFixed(6);
                 break;
             case 'x!':
                 let fact = 1;
@@ -95,6 +91,79 @@ functions.forEach((func) => {
             case 'EE':
                 result.innerHTML += 'e';
                 break;
+            case 'd/c':
+                result.innerHTML = Math.floor(value);
+                break;
+            case 'π':
+                result.innerHTML = Math.PI.toFixed(6);
+                break;
+            case 'Rand':
+                result.innerHTML = Math.random().toFixed(6);
+                break;
+            case 'sin-1':
+                result.innerHTML = Math.asin(value).toFixed(6);
+                break;
+            case 'cos-1':
+                result.innerHTML = Math.acos(value).toFixed(6);
+                break;
+            case 'tan-1':
+                result.innerHTML = Math.atan(value).toFixed(6);
+                break;
+            case '3√':
+                result.innerHTML = Math.cbrt(value).toFixed(6);
+                break;
+
+        }
+    });
+});
+
+let shift = document.getElementById('shift');
+let isShiftActive = false;
+
+shift.addEventListener('click', () => {
+    isShiftActive = !isShiftActive;
+    functions.forEach((func) => {
+        if (isShiftActive) {
+            switch (func.innerHTML) {
+                case '^':
+                    func.innerHTML = '3√';
+                    break;
+                case 'ln':
+                    func.innerHTML = 'eˣ';
+                    break;
+                case 'Log':
+                    func.innerHTML = '10^x';
+                    break;
+                case 'sin':
+                    func.innerHTML = 'cos-1';
+                    break;
+                case 'cos':
+                    func.innerHTML = 'tan-1';
+                    break;
+                case 'tan':
+                    func.innerHTML = 'sin-1';
+                    break;
+            }
+        } else {
+            switch (func.innerHTML) {
+                case 'x√':
+                    func.innerHTML = '^';
+                    break;
+                case 'eˣ':
+                    func.innerHTML = 'ln';
+                    break;
+                case '10^x':
+                    func.innerHTML = 'Log';
+                    break;
+                case 'cos-1':
+                    func.innerHTML = 'sin';
+                    break;
+                case 'tan-1':
+                    func.innerHTML = 'cos';
+                    break;
+                case 'sin-1':
+                    func.innerHTML = 'tan';
+            }
         }
     });
 });
@@ -114,6 +183,9 @@ equal.addEventListener('click', () => {
             break;
         case '/':
             res = parseFloat(firstValue) / parseFloat(secondValue);
+            break;
+        case '^':
+            res = Math.pow(parseFloat(firstValue), parseFloat(secondValue));
             break;
     }
     resultOpr.innerHTML = firstValue + ' ' + operatorValue + ' ' + secondValue;
