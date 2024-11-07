@@ -8,38 +8,62 @@ th, td {
     background-color: #323232;
     color: aliceblue;
     text-align: center;
-    padding: 20px;
-    font: 1.5em sans-serif;
-    border-radius: 50px;
-    width: 15%;
+   
 }
 
 .result-section {
     width: 365px;
-    height: 250px;
+    height: 145px;
     position: relative;
 }
 
-.result-table {
-    
+.result-section td , th {
+    padding: 20px;
+    font: 1.5em sans-serif;
+    text-align: end;
+    width: 15%;
 }
 
 .operations-section {
     width: 365px;
     height: 145px;
     position: relative;
+    margin-left: 6px;
 }
 
 .operations-section table {
     width: 93%;
     height: 70%;
+}
+
+.operations-section td , th {
+    padding: 12px;
+    font: 0.9em sans-serif;
+    border-radius: 30px;
+
+}
+
+.basic-operations-section {
+    width: 365px;
+    height: 145px;
     position: relative;
+}
+
+.basic-operations-section table {
+    width: 93%;
+    height: 70%;
+}
+
+.basic-operations-section td , th {
+    padding: 20px;
+    font: 1.5em sans-serif;
+    border-radius: 50px;
 }
 
 
 .calculator {
-    width: fit-content;
-    height: 573px;
+    width: 365px;
+    height: 720px;
     margin-top: 6%;
     border: 1px solid #000000;
     border-radius: 20px;
@@ -117,15 +141,6 @@ th, td {
 
 #dropdown-menu li:hover {
     color: #F79000;
-}
-
-#functions {
-    display: none;
-    width: 365px;
-    height: 145px;
-    position: relative;    border-radius: 10px;
-    box-shadow: 0 0 10px 0 #000000;
-    text-align: center;
 }
 
 .func-btn {
