@@ -13,6 +13,9 @@ let mode1 = document.getElementById('mode1');
 let mode2 = document.getElementById('mode2');
 let functionsSection = document.getElementById('functions');
 
+// Set mode1 (Basic) as default
+functionsSection.style.display = 'none';
+
 mode1.addEventListener('click', () => {
     functionsSection.style.display = 'none';
 });
